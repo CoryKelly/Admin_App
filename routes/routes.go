@@ -41,6 +41,10 @@ func Setup(app *fiber.App) {
 	app.Post("/api/products", controllers.CreateProduct)
 	app.Get("/api/products", controllers.GetAllProducts)
 
+	app.Get("/api/orders", controllers.GetAllOrders)
+	app.Post("/api/export", controllers.Export)
+	app.Get("/api/chart", controllers.Chart)
+
 	app.Post("/api/upload", controllers.Upload)
 	app.Static("/api/uploads", "./uploads")
 }
